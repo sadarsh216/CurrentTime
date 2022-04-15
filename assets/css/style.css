@@ -1,0 +1,62 @@
+:root {
+  /* --bg-color: rgb(15, 15, 15); */
+  --bg-color: black;
+  --card: rgb(26, 24, 24);
+  --primary: #05a0d1;
+}
+body {
+  background-color: var(--bg-color);
+}
+.container {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 50%;
+  height: 300px;
+  width: 300px;
+  background-color: var(--card);
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--card);
+  box-shadow: inset 0px 0px 18px 25px var(--bg-color),
+    0px 0px 18px 0px var(--primary);
+
+  -webkit-box-reflect: below 20px -webkit-gradient(linear, right top, right
+        bottom, from(transparent), color-stop(40%, transparent), to(rgba(255, 255, 255, 0.1)));
+}
+h1 {
+  color: var(--primary);
+  font-size: 10em;
+}
+
+#dot {
+  font-size: 10em;
+  color: var(--bg-color);
+  animation: blinker 2s linear infinite;
+}
+
+@keyframes blinker {
+  50% {
+    color: red;
+    text-shadow: 0 0 20px #fff, 0 0 10px var(--primary), 0 0 20px var(--primary),
+      0 0 30px red;
+  }
+}
+.line {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  background-color: #05a0d1;
+  height: 2px;
+  width: 80%;
+  margin: auto;
+  box-shadow: 0 0 20px #fff, 0 0 10px var(--primary), 0 0 20px var(--primary),
+    0 0 30px red;
+}
